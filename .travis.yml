@@ -25,13 +25,13 @@ before_install:
   - docker push dinhtin12/udagram-api-user:v2
 
   # frontend
-  - docker build -t udagram-api-frontend ./udagram-api-frontend
-  - docker tag udagram-api-frontend dinhtin12/udagram-api-frontend:v2
+  - docker build -t udagram-frontend ./udagram-frontend
+  - docker tag udagram-frontend dinhtin12/udagram-frontend:v2
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push dinhtin12/udagram-api-frontend:v2
+  - docker push dinhtin12/udagram-frontend:v2
 
   # reverseproxy
   - docker build -t udagram-reverseproxy ./udagram-reverseproxy
   - docker tag udagram-reverseproxy dinhtin12/udagram-reverseproxy:v2
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push dinhtin12/udagram-api-frontend:v2
+  - docker push dinhtin12/udagram-reverseproxy:v2
