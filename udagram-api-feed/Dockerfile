@@ -8,4 +8,5 @@ RUN npm ci
 # Bundle app source
 COPY . .
 EXPOSE 8080
+ENV NODE_OPTIONS=--max-old-space-size=4076
 CMD [ "npm", "run", "prod" ]
