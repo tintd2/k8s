@@ -17,7 +17,8 @@ before_install:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push dinhtin12/udagram-api-feed:v5
 
-script: npm test
+script: 
+  npm prod
   # Do similar for other three images
 
   # # user
