@@ -16,6 +16,8 @@ before_install:
   # Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push dinhtin12/udagram-api-feed:v5
+
+script: npm test
   # Do similar for other three images
 
   # # user
