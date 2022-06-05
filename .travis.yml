@@ -18,7 +18,7 @@ before_install:
   - docker push dinhtin12/udagram-api-feed:v5
 
 script: 
-  npm prod
+  - npm prod
   # Do similar for other three images
 
   # # user
